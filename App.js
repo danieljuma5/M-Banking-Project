@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hapa ni  wapi at last!</Text>
+      <Text>The M-Banking application begins!</Text>
       <StatusBar style="auto" />
     </View>
   );
