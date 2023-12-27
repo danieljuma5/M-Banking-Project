@@ -41,7 +41,8 @@ const Login = () => {
   };
 
   const handleRegister = () => {
-    // Code to navigate to the signup page (to be implemented later)
+    // Code to navigate to the signup page 
+    navigation.navigate('Registration')
   };
 
   const handleSubmit = () => {
