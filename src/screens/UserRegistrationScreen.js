@@ -24,6 +24,7 @@ const UserRegistration = ({ navigation }) => {
     // Logic to handle form submission (registration)
     // You can access form values using firstName, lastName, accountNumber, pin states
     // For example: Send API request to register user
+    navigation.navigate('Login')
   };
 
   return (

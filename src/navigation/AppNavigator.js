@@ -4,6 +4,7 @@ import React from 'react';
 import Home from '../screens/Home';
 import LoginScreen from '../screens/LoginScreen';
 import UserRegistration from '../screens/UserRegistrationScreen';
+import BankServices from '../screens/BankServicesScreen';
 
 
 
@@ -15,6 +16,7 @@ const AppNavigator = () => {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name='Login' component={LoginScreen} />
       <Stack.Screen name='Registration' component={UserRegistration} />
+      <Stack.Screen name='Services' component={BankServices} />
       {/* Other screens here */}
     </Stack.Navigator>
   );

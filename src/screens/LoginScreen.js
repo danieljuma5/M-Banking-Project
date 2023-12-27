@@ -47,6 +47,7 @@ const Login = () => {
 
   const handleSubmit = () => {
     // Logic for handling form submission (login)
+    navigation.navigate('Services')
   };
 
   return (
