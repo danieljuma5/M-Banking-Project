@@ -1,13 +1,53 @@
-import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import React,{useEffect} from 'react';
+import { StyleSheet, View, Text, TouchableOpacity,BackHandler,Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const BankServices = () => {
   const navigation = useNavigation();
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      showAlert();
+      return true;
+    });
 
+    // Prevent hardware back press listener when component unmounts
+    return () => backHandler.remove();
+  }, []);
+
+  const showAlert = () => {
+    Alert.alert(
+      'Logout',
+      'Are you sure you want to log out?',
+      [
+        {
+          text: 'No',
+          onPress: () => {},
+          style: 'cancel',
+        },
+        {
+          text: 'Yes',
+          onPress: () => {
+            // Logic for logging out (navigate to login screen or perform logout action)
+            navigation.navigate('Login');
+          },
+        },
+      ],
+      { cancelable: true }
+    );
+  };
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('beforeRemove', (e) => {
+      e.preventDefault(); // Prevents default behavior
+
+      showAlert(); // Show the alert when the back arrow is pressed in the header
+    });
+
+    return unsubscribe;
+  }, [navigation]);
   const handleDeposit = () => {
     // Navigation or logic for Deposit service
-    // For example: navigation.navigate('DepositScreen');
+    navigation.navigate('Deposit');
   };
 
   const handleBalanceEnquiry = () => {

@@ -5,6 +5,7 @@ import Home from '../screens/Home';
 import LoginScreen from '../screens/LoginScreen';
 import UserRegistration from '../screens/UserRegistrationScreen';
 import BankServices from '../screens/BankServicesScreen';
+import Deposit from '../screens/services/DepositScreen';
 
 
 
@@ -17,7 +18,7 @@ const AppNavigator = () => {
       <Stack.Screen name='Login' component={LoginScreen} />
       <Stack.Screen name='Registration' component={UserRegistration} />
       <Stack.Screen name='Services' component={BankServices} />
-      {/* Other screens here */}
+      <Stack.Screen name='Deposit' component={Deposit} />
     </Stack.Navigator>
   );
 };
