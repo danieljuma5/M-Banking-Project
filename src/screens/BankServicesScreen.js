@@ -10,7 +10,6 @@ const BankServices = () => {
       return true;
     });
 
-    // Prevent hardware back press listener when component unmounts
     return () => backHandler.remove();
   }, []);
 
@@ -27,7 +26,6 @@ const BankServices = () => {
         {
           text: 'Yes',
           onPress: () => {
-            // Logic for logging out (navigate to login screen or perform logout action)
             navigation.navigate('Login');
           },
         },
@@ -36,19 +34,10 @@ const BankServices = () => {
     );
   };
 
-  useEffect(() => {
-    const unsubscribe = navigation.addListener('beforeRemove', (e) => {
-      e.preventDefault(); // Prevents default behavior
-
-      showAlert(); // Show the alert when the back arrow is pressed in the header
-    });
-
-    return unsubscribe;
-  }, [navigation]);
   const handleDeposit = () => {
-    // Navigation or logic for Deposit service
-    navigation.navigate('Deposit');
+    navigation.push('Deposit');
   };
+
 
   const handleBalanceEnquiry = () => {
     // Navigation or logic for Balance Enquiry service
