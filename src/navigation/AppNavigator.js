@@ -6,6 +6,7 @@ import LoginScreen from '../screens/LoginScreen';
 import UserRegistration from '../screens/UserRegistrationScreen';
 import BankServices from '../screens/BankServicesScreen';
 import Deposit from '../screens/services/DepositScreen';
+import BalanceEnquiry from '../screens/services/BalanceEnquiryScreen';
 
 
 
@@ -19,6 +20,7 @@ const AppNavigator = () => {
       <Stack.Screen name='Registration' component={UserRegistration} />
       <Stack.Screen name='Services' component={BankServices} />
       <Stack.Screen name='Deposit' component={Deposit} />
+      <Stack.Screen name='Balance' component={BalanceEnquiry} />
     </Stack.Navigator>
   );
 };

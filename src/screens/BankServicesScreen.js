@@ -41,7 +41,7 @@ const BankServices = () => {
 
   const handleBalanceEnquiry = () => {
     // Navigation or logic for Balance Enquiry service
-    // For example: navigation.navigate('BalanceEnquiryScreen');
+    navigation.navigate('Balance');
   };
 
   const handleStopCheque = () => {
