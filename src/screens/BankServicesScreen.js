@@ -46,7 +46,7 @@ const BankServices = () => {
 
   const handleStopCheque = () => {
     // Navigation or logic for Stop Cheque service
-    // For example: navigation.navigate('StopChequeScreen');
+    navigation.navigate('StopCheque');
   };
 
   const handleChangePin = () => {
