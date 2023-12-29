@@ -51,7 +51,7 @@ const BankServices = () => {
 
   const handleChangePin = () => {
     // Navigation or logic for Change PIN service
-    // For example: navigation.navigate('ChangePinScreen');
+    navigation.navigate('ChangePin');
   };
 
   const handleFinancialServices = () => {
